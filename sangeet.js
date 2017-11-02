@@ -51,6 +51,19 @@ $(document).ready(function(){
   	//only start the timer if the last timer didn't finish
   	if (!finished) starttimer();
   });
+  
+  // Functionality in Both button
+  $('#reset').on('click', function(){
+  	//stop any on going timer
+  	stoptimer();
+    //clear the maximum value for new value
+    $max.val('');
+  });
 
-    
+  $('#restart').on('click', function(){
+  	//stop any on going timer
+  	stoptimer();
+    //start the timer again
+    starttimer();
+  });
 });
